@@ -1,0 +1,15 @@
+void kernel_main() {
+    // Simple kernel that prints "Hello, OS!"
+    const char *str = "Hello, OS!";
+    char *vidptr = (char*)0xb8000;  // Video memory begins here.
+    unsigned int i = 0;
+    unsigned int j = 0;
+
+    while (str[j] != '\0') {
+        vidptr[i] = str[j];
+        vidptr[i+1] = 0x07;  // Attribute-byte: light grey on black screen
+        ++j;
+        i = i + 2;
+    }
+    return;
+}
