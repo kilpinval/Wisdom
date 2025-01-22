@@ -1,0 +1,15 @@
+#include <libstd.h>
+#include <conio,h>
+
+int main(){
+    int n=10;
+    char * p;
+    p = malloc(n*sizeof(char));
+    if(null == 0){
+    printf("hubo un error \n");    
+    }else{
+        printf("se abrio corectamente \n");
+
+    }
+    return 0;
+}
