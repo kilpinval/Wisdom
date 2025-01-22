@@ -2,16 +2,14 @@
 #include <stdio.h>
 
 int main(){
-    int n=10;
-    char * p;
-    p = malloc(n*sizeof(char));
-    if(p == NULL){
+    int *array;
+    
+    array = malloc(10*sizeof(int));
+    if(array == NULL){
     printf("hubo un error \n");
     exit(1);
-       
-    }else{
-        printf("%p \n",*p);
-
     }
+    printf("%d \n", *array);
+    printf("%d \n", array[1]);
     return 0;
 }
